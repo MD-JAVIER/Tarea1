@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS</title>
+</head>
+<body>
+
+    <h1>Ejercicios de Eventos JavaScript</h1>
+
+    <h2>1. Alternar Luz</h2>
+
+    <div id="caja"></div>
+
+        
+    </button>
+
+<pre>
+
+function alternarLuz(){
+
+    let caja = document.getElementById("caja");
+
+    if(caja.style.backgroundColor == "yellow"){
+        caja.style.backgroundColor = "gray";
+    }else{
+        caja.style.backgroundColor = "yellow";
+    }
+
+}
+
+</pre>
+    <h2>2. Contador de Clicks</h2>
+<pre>
+
+let contador = 0;
+
+document.getElementById("incrementar")
+.addEventListener("click", () => {
+
+    contador++;
+
+    document.getElementById("contador")
+    .innerText = contador;
+
+});
+
+</pre>
+    <h2>3. Lista Dinámica</h2>
+<pre>
+
+document.getElementById("agregar")
+.addEventListener("click", () => {
+
+    let texto = document.getElementById("item").value;
+
+    let li = document.createElement("li");
+
+    li.textContent = texto;
+
+    document.getElementById("lista")
+    .appendChild(li);
+
+});
+
+</pre>
+
+
+    <h2>4. Cambio de Tema</h2>
+<pre>
+
+document.getElementById("modo")
+.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+});
+
+</pre>
+
+
+    <h2>5. Contador Regresivo</h2>
+<pre>
+
+let tiempo = 10;
+
+let intervalo = setInterval(() => {
+
+    tiempo = tiempo - 1;
+
+    document.getElementById("tiempo")
+    .innerText = tiempo;
+
+    if(tiempo === 0){
+
+        clearInterval(intervalo);
+    }
+},1000);
+</pre>
+    <h2>6. Mensaje</h2>
+    </button>
+<pre>
+function saludar() {
+    alert("Hola Javi");
+}
+</pre>
+
+</body>
+</html>
